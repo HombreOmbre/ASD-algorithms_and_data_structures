@@ -35,12 +35,11 @@ class BinarySearchTest {
     @Test
     void searchWithMillionLengthListIntegers() {
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 999999; i++) {
-            list.add((int) Math.random() * 100);
+        for (int i = 0; i < 1000000; i++) {
+            list.add(i * 2);
         }
-        list.add(99999);
 
-        assertEquals(binarySearch.search(list, 99999), 999999);
+        assertEquals(binarySearch.search(list, 1500000), 750000);
     }
 
     @Test
