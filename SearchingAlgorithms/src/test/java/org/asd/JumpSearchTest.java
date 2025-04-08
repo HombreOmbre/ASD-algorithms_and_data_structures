@@ -37,11 +37,10 @@ class JumpSearchTest {
     void searchJumpWithMillionLengthListIntegers() {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 999999; i++) {
-            list.add((int) Math.random() * 100);
+            list.add(i * 2);
         }
-        list.add(99999);
 
-        assertEquals(jumpSearch.search(list, 99999), 999999);
+        assertEquals(jumpSearch.search(list, 1500000), 750000);
     }
 
     @Test
